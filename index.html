@@ -161,7 +161,7 @@ async function upload(){
   try{
     const ext = file.name.split(".").pop().toLowerCase();
     const filename = Date.now() + "." + ext;
-    const path = filename;
+    const path = `uploads/${filename}`;
 
     const buffer = await file.arrayBuffer();
     let binary = "";
